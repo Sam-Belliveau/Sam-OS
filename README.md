@@ -13,7 +13,7 @@ copyright	- Gives Copyright information to code used in this project.
 
 prime		  - Checks if a number is prime.
 
-hash		  - Gives a SHA256 hash of text." << endl;
+hash		  - Gives a SHA256 hash of text.
 
 password	- Gives a rating for your password.
 
