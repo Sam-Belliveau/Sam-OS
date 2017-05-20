@@ -3,9 +3,9 @@
 This is a simple program that I made in c++ that has some of functions. There are not a lot of commands but it will be updated overtime.
 
 #### A list of basic commands are:
-tips		  - Prints a list of commands.
+help		  - Prints a list of commands.
 
-info		  - Gives in depth information about this operating system.
+tips		  - Gives in depth information about this operating system.
 
 setname	  - Opens prompt to change username.
 
