@@ -1,72 +1,67 @@
-/*
+Updated to C++, zedwood.com 2012
+ 
+Based on Olivier Gay's version
+ 
+See Modified BSD License below: 
+ 
 
- * Updated to C++, zedwood.com 2012
  
- * Based on Olivier Gay's version
+FIPS 180-2 SHA-224/256/384/512 implementation
  
- * See Modified BSD License below: 
+Issue date:  04/30/2005
+
+http://www.ouah.org/ogay/sha2/
+
+
  
- *
+Copyright (C) 2005, 2007 Olivier Gay <olivier.gay@a3.epfl.ch>
  
- * FIPS 180-2 SHA-224/256/384/512 implementation
+All rights reserved.
  
- * Issue date:  04/30/2005
+
  
- * http://www.ouah.org/ogay/sha2/
+Redistribution and use in source and binary forms, with or without
  
- *
+modification, are permitted provided that the following conditions
  
- * Copyright (C) 2005, 2007 Olivier Gay <olivier.gay@a3.epfl.ch>
+are met:
  
- * All rights reserved.
+1. Redistributions of source code must retain the above copyright
  
- *
+   notice, this list of conditions and the following disclaimer.
  
- * Redistribution and use in source and binary forms, with or without
+2. Redistributions in binary form must reproduce the above copyright
  
- * modification, are permitted provided that the following conditions
+   notice, this list of conditions and the following disclaimer in the
  
- * are met:
+   documentation and/or other materials provided with the distribution.
  
- * 1. Redistributions of source code must retain the above copyright
+3. Neither the name of the project nor the names of its contributors
  
- *    notice, this list of conditions and the following disclaimer.
+   may be used to endorse or promote products derived from this software
  
- * 2. Redistributions in binary form must reproduce the above copyright
+   without specific prior written permission.
  
- *    notice, this list of conditions and the following disclaimer in the
+
  
- *    documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
  
- * 3. Neither the name of the project nor the names of its contributors
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  
- *    may be used to endorse or promote products derived from this software
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
  
- *    without specific prior written permission.
+ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
  
- *
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
  
- * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
  
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
  
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
- 
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- 
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- 
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- 
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- 
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- 
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- 
- * SUCH DAMAGE.
- 
- */
- 
+SUCH DAMAGE.
