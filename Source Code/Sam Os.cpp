@@ -104,7 +104,7 @@ void printHeader() {
 void printHelp() {
 	cout << "-----HELP-----" << endl;
 	cout << "help		- Prints a list of commands." << endl;
-	cout << "info		- Gives in depth information about this operating system." << endl;
+	cout << "tips		- Gives tips about this operating system." << endl;
 	cout << "setname		- Opens prompt to change username." << endl;
 	cout << "copyright	- Gives Copyright information to code used in this project." << endl;
 	cout << "prime		- Checks if a number is prime." << endl;
@@ -122,7 +122,7 @@ void printCopyright() {
 }
 
 void printInfo() {
-	cout << "-----INFO-----" << endl;
+	cout << "-----TIPS-----" << endl;
 	cout << "When entering commands, having spaces lets you enter multipule parts of a command in one line." << endl;
 	cout << "For example. 'setname hello' is the same as 'setname' then entering 'hello'." << endl;
 }
@@ -203,7 +203,7 @@ int main()
 		else if (command == "sqrt") { sqrt(); }
 		else if (command == "trifinder") { trifinder(); }
 		else if (command == "hash") { hashCommand(); }
-		else if (command == "info") { printInfo(); }
+		else if (command == "tips") { printInfo(); }
 		else { printIllegalCommand(command); }
 		cout << endl;
 		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
