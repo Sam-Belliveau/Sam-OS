@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const string version = "2.73";
+const string version = "3.3";
 const string language = "C++ 11";
 const string developer = "Sam";
 string command;
@@ -111,6 +111,7 @@ void printHelp() {
 	cout << "hash		- Gives a SHA256 hash of text." << endl;
 	cout << "password	- Gives a rating for your password." << endl;
 	cout << "sqrt		- Finds the square root of a number" << endl;
+	cout << "pattern		- You enter 5 numbers and it will give you a guess of the next 3 numbers." << endl;
 	cout << "trifinder	- Uses a^2 + b^2 = c^2 to find C." << endl;
 	cout << "quit		- Closes window." << endl;
 }
@@ -167,6 +168,48 @@ void passwordCheck() {
 	cout << "Your password '" << text << "' gets a score of " << score << "/100." << endl;
 }
 
+void returnPattern() {
+	int a, b, c, d, e;
+	cout << "Enter 5 Numbers:";
+	cin >> a >> b >> c >> d >> e;
+	cout << endl;
+	while (cin.fail())
+	{
+		cin.clear(); // clear input buffer to restore cin to a usable state
+		cin.ignore(INT_MAX, '\n'); // ignore last input
+		cout << "\nYou can only enter numbers.\n";
+		cout << "Enter 5 Numbers:";
+		cin >> a >> b >> c >> d >> e;
+		cout << endl;
+	}
+	int list[] = { a, b, c, d, e };
+	int list1[] = { (list[1] - list[0]), (list[2] - list[1]), (list[3] - list[2]), (list[4] - list[3]) };
+	int list2[] = { (list1[1] - list1[0]), (list1[2] - list1[1]), (list1[3] - list1[2]) };
+	int list3[] = { (list2[1] - list2[0]), (list2[2] - list2[1]) };
+	int dif = (list3[1] - list3[0]);
+	int a1dif3 = (list3[1] + dif);
+	int a1dif2 = (list2[2] + a1dif3);
+	int a1dif1 = (list1[3] + a1dif2);
+	int estimate1 = (list[4] + a1dif1);
+	int a2dif3 = (a1dif3 + dif);
+	int a2dif2 = (a1dif2 + a2dif3);
+	int a2dif1 = (a1dif1 + a2dif2);
+	int estimate2 = (estimate1 + a2dif1);
+	int a3dif3 = (a2dif3 + dif);
+	int a3dif2 = (a2dif2 + a3dif3);
+	int a3dif1 = (a2dif1 + a3dif2);
+	int estimate3 = (estimate2 + a3dif1);
+	int estimates[] = { estimate1, estimate2, estimate3 };
+
+	cout << "My estimates for the next 3 numbers are: " << estimates[0] << ", " << estimates[1] << ", " << estimates[2] << endl;
+	if (dif == 0) {
+		cout << "I am 100% sure about my estimates." << endl;
+	}
+	else {
+		cout << "I do not think I had enough numbers to give an accurate result." << endl;
+	}
+}
+
 void hashCommand() {
 	string text;
 	cout << "Enter Text: ";
@@ -201,6 +244,7 @@ int main()
 		else if (command == "copyright") { printCopyright(); }
 		else if (command == "password") { passwordCheck(); }
 		else if (command == "sqrt") { sqrt(); }
+		else if (command == "pattern") { returnPattern(); }
 		else if (command == "trifinder") { trifinder(); }
 		else if (command == "hash") { hashCommand(); }
 		else if (command == "tips") { printInfo(); }
@@ -208,6 +252,14 @@ int main()
 		cout << endl;
 		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
+	cout << endl;
+	cout << "Quitting in..." << endl;
+	cout << "3..." << endl;
+	Concurrency::wait(1000);
+	cout << "2..." << endl;
+	Concurrency::wait(1000);
+	cout << "1..." << endl;
+	Concurrency::wait(1000);
     return 0;
 }
 

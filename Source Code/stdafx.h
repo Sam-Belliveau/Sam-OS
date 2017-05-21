@@ -8,6 +8,7 @@
 #include "targetver.h"
 #include "sha256.h"
 
+#include <concrt.h>
 #include <iostream>
 #include <string>
 #include <cstring>
